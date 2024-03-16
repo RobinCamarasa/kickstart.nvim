@@ -39,7 +39,6 @@ function M.restart_xfile()
   vim.fn.jobstart('xdg-open ' .. M.xfile)
 end
 
--- TODO: implement
 function M.pick_xfile()
   M.xfile = vim.fn.input { prompt = 'Select file to display: ' }
   M.restart_xfile()
