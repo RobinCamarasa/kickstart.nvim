@@ -15,18 +15,6 @@ require 'vim-basic'
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  {
-    'stevearc/oil.nvim',
-    default_file_explorer = true,
-    skip_confirm_for_simple_edits = false,
-
-    opts = {},
-    -- Optional dependencies
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      require('oil').setup(vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' }))
-    end,
-  },
   { 'numToStr/Comment.nvim', opts = {} },
   { -- Usefull to show what has been changed since last commit
     'lewis6991/gitsigns.nvim',
@@ -468,8 +456,8 @@ require('lazy').setup({
   --
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
-  { import = 'custom.plugins' },
-  { import = 'custom.perso' },
+  { import = 'plugins' },
+  { import = 'perso' },
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
