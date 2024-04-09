@@ -4,7 +4,7 @@ return { -- Useful plugin to show you pending keybinds.
   config = function()
     require('which-key').setup()
     require('which-key').register {
-      ['<leader>d'] = { name = '[D]iagnostic', _ = 'which_key_ignore' },
+      ['<leader>d'] = { name = '[d]iagnostic', _ = 'which_key_ignore' },
     }
   end,
 }
