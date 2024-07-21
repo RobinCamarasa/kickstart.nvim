@@ -8,3 +8,4 @@ iabbrev <buffer> xcc \begin{column}{\textwidth}<CR>\end{column}<ESC>k$F\i
 iabbrev <buffer> xit \item
 iabbrev <buffer> xbe \begin{##}<cr>\end{##}<esc>kvj:s/##/
 iabbrev <buffer> xbp \begin{itemize}<esc>yyplciwend<esc>O\item
+iabbrev <buffer> xtp \begin{tikzpicture}<CR>\end{tikzpicture}<ESC>O
