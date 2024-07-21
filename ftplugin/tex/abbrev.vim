@@ -9,3 +9,7 @@ iabbrev <buffer> xit \item
 iabbrev <buffer> xbe \begin{##}<cr>\end{##}<esc>kvj:s/##/
 iabbrev <buffer> xbp \begin{itemize}<esc>yyplciwend<esc>O\item
 iabbrev <buffer> xtp \begin{tikzpicture}<CR>\end{tikzpicture}<ESC>O
+
+cabbrev <buffer> sm w \| silent make
+cabbrev <buffer> tm w \| execute('term ' .. &makeprg)
+cabbrev <buffer> gx w \| silent make \| silent !zathura %:.:r.pdf &
