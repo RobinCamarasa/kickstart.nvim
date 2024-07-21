@@ -1,7 +1,6 @@
 -- [[ Set-up leaders ]]
 vim.g.mapleader = ' '
--- TODO: find smartkey for local leader
-vim.g.maplocalleader = ' '
+vim.g.maplocalleader = '\\'
 
 -- [[ Basic options ]]
 vim.opt.number = true
@@ -36,6 +35,7 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- [[ Leader Keymaps ]]
 vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('i', '<C-e>', '<C-]>', { desc = 'Expand abbreviation' })
 
 -- [[ Basic Autocommands ]]
 vim.api.nvim_create_autocmd('TextYankPost', {
