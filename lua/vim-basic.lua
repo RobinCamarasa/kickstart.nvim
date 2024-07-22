@@ -23,6 +23,7 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 5
 vim.opt.hlsearch = true
+vim.opt.exrc = true
 
 -- [[ Vim extension Keymaps ]]
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -45,3 +46,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+--[[ Filetype ]]
+vim.cmd [[autocmd! BufRead,BufNewFile *.puml set filetype=puml]]
