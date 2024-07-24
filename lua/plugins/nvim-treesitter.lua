@@ -32,4 +32,27 @@ return {
       }
     end,
   },
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
+        auto_install = true,
+        textobjects = {
+          select = {
+            enable = true,
+            lookahead = true,
+            keymaps = {
+              ['if'] = '@function.inner',
+              ['af'] = '@function.outer',
+              ['ic'] = '@class.inner',
+              ['ac'] = '@class.outer',
+              ['ib'] = '@block.inner',
+              ['ab'] = '@block.outer',
+            },
+          },
+        },
+      }
+    end,
+  },
 }
