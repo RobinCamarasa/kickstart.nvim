@@ -24,8 +24,8 @@ local run_closest_test = function()
   print(func_name)
 end
 
-require('which-key').register {
-  ['<leader>t'] = { name = '[t]est', _ = 'which_key_ignore' },
+require('which-key').add {
+  { '<leader>t', group = '[t]est' },
 }
 vim.keymap.set('n', '<leader>tc', run_closest_test, { desc = '[t]est: run [c]losest' })
 

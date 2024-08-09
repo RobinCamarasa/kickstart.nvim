@@ -3,8 +3,8 @@ return { -- Useful plugin to show you pending keybinds.
   event = 'VimEnter', -- Sets the loading event to 'VimEnter'
   config = function()
     require('which-key').setup()
-    require('which-key').register {
-      ['<leader>d'] = { name = '[d]iagnostic', _ = 'which_key_ignore' },
+    require('which-key').add {
+      { '<leader>d', group = '[d]iagnostic' },
     }
   end,
 }

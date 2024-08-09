@@ -69,10 +69,11 @@ return { -- LSP Configuration & Plugins
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
       grammarly = {
-        filetypes = { 'tex' },
+        filetypes = { 'md' },
       },
-      volar = {},
-      pyright = {},
+      volar = { filetypes = { 'vue' } },
+      rust_analyzer = { filetypes = { 'rust' } },
+      pyright = { filetypes = { 'python' } },
       lua_ls = {
         settings = {
           Lua = {

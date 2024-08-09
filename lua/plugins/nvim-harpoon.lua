@@ -5,8 +5,8 @@ return {
   config = function()
     local harpoon = require 'harpoon'
     harpoon:setup()
-    require('which-key').register {
-      ['<leader>h'] = { name = '[h]arpoon', _ = 'which_key_ignore' },
+    require('which-key').add {
+      { '<leader>h', group = '[h]arpoon' },
     }
     vim.keymap.set('n', '<leader>ha', function()
       harpoon:list():append()

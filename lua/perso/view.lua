@@ -45,8 +45,8 @@ function M.pick_xfile()
 end
 
 -- UI
-require('which-key').register {
-  ['<leader>x'] = { name = '[X]dg-open', _ = 'which_key_ignore' },
+require('which-key').add {
+  { '<leader>x', group = '[X]dg-open' },
 }
 
 vim.keymap.set('n', '<leader>xx', M.start_xfile, { desc = 'Open the most logical file with xdg-open' })
