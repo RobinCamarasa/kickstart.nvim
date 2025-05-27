@@ -1,5 +1,6 @@
 iabbrev <buffer> xue @startuml<CR>@enduml<ESC>O
 iabbrev <buffer> xme @startmindmap<CR>@endmindmap<ESC>O
+iabbrev <buffer> xre @startregex<CR>@endregex<ESC>O
 iabbrev <buffer> rect rectangle
 iabbrev <buffer> stor storage
 
