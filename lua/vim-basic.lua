@@ -37,6 +37,7 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 vim.keymap.set('i', '<C-e>', '<C-]>', { desc = 'Expand abbreviation' })
+vim.keymap.set('i', 'jj', '<Esc>')
 
 -- [[ Basic Autocommands ]]
 vim.api.nvim_create_autocmd('TextYankPost', {
