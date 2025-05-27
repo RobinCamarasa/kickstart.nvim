@@ -8,6 +8,7 @@ return { -- Autoformat
     },
     formatters_by_ft = {
       lua = { 'stylua' },
+      bib = { 'bibtex-tidy' },
       python = { 'isort', 'black' },
     },
   },
