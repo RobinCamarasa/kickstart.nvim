@@ -23,8 +23,8 @@ return { -- LSP Configuration & Plugins
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
 
         -- [[ vim lsp keymap ]]
-        require('which-key').register {
-          ['<leader>l'] = { name = '[L]SP', _ = 'which_key_ignore' },
+        require('which-key').add {
+          { '<leader>l', group = '[L]SP' },
         }
         map('<leader>ld', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
         map('<leader>ls', require('telescope.builtin').lsp_document_symbols, 'Document [S]ymbols')
